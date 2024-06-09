@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    int numero, factorial = 1;
+
+    // Solicitar al usuario que ingrese un número
+    printf("Ingrese un numero para calcular su factorial: ");
+    scanf("%d", &numero);
+
+    // Calcular el factorial
+    for (int i = numero; i > 1; i--) {
+        factorial *= i;
+    }
+
+    // Imprimir el resultado
+    printf("%d! = ", numero);
+    for (int i = numero; i > 1; i--) {
+        printf("%d * ", i);
+    }
+    printf("1 = %d\n", factorial);
+
+    return 0;
+}
