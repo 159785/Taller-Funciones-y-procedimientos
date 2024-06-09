@@ -1,0 +1,22 @@
+//Ejercicio 1
+#include <stdio.h>
+
+int main() {
+    int numero, suma = 0;
+
+    printf("Ingrese un numero: ");
+    scanf("%d", &numero);
+
+    // Ciclo for para generar una secuencia de números desde 1 hasta el número ingresado
+    for (int i = 1; i <= numero; i++) {
+        suma += i; // Sumar el número actual al total
+        printf("%d ", i); // Imprimir el número actual que se está sumando
+        if (i < numero) {
+            printf("+ "); // Imprimir el signo de suma si no es el último número
+        }
+    }
+
+    printf("= %d\n", suma); // Imprimir la suma total
+
+    return 0;
+}
