@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+    int numero, raiz_cubica = 0;
+
+    // Solicitar al usuario el número del cual se desea calcular la raíz cúbica
+    printf("Ingrese un numero para calcular su raiz cubica: ");
+    scanf("%d", &numero);
+
+    // Calcular la raíz cúbica utilizando restas sucesivas
+    for (int i = 1; i <= numero; i++) {
+        int cubo = i * i * i;
+        if (cubo == numero) {
+            raiz_cubica = i;
+            break;
+        } else if (cubo > numero) {
+            raiz_cubica = i - 1;
+            break;
+        }
+    }
+
+    // Imprimir la raíz cúbica
+    printf("La raiz cubica de %d es: %d\n", numero, raiz_cubica);
+
+    return 0;
+}
