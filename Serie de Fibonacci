@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main() {
+    int n, primero = 0, segundo = 1, siguiente;
+
+    // Solicitar al usuario el número de elementos de la serie de Fibonacci
+    printf("Ingrese el numero de elementos de la serie de Fibonacci: ");
+    scanf("%d", &n);
+
+    // Imprimir los primeros n elementos de la serie de Fibonacci
+    printf("Los %d primeros elementos de la serie de Fibonacci son:\n", n);
+
+    printf("%d, %d", primero, segundo); // Imprimir los dos primeros elementos
+
+    for (int i = 2; i < n; i++) {
+        siguiente = primero + segundo;
+        printf(", %d", siguiente); // Imprimir el siguiente elemento
+        primero = segundo;
+        segundo = siguiente;
+    }
+
+    printf("\n");
+
+    return 0;
+}
