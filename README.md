@@ -1,4 +1,3 @@
-# Taller-Funciones-y-procedimientos
 1. **Suma de los dígitos de un número**
    [- `ejercicios/suma_digitos.c`](https://github.com/159785/Taller_Funciones_y_procedimientos/blob/71986ab0f6607858fd86aed3e649177d44994ed2/Suma%20de%20los%20d%C3%ADgitos%20de%20un%20n%C3%BAmero)
 2. **Inverso de un número**
