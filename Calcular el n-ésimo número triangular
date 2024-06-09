@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main() {
+    int n;
+    int suma = 0;
+
+    // Solicitar al usuario que ingrese un número
+    printf("Ingrese un numero: ");
+    scanf("%d", &n);
+
+    // Imprimir la serie y calcular la suma
+    printf("Si n = %d, el número triangular es ", n);
+    for (int i = 1; i <= n; i++) {
+        printf("%d", i);
+        suma += i;
+        if (i != n) {
+            printf(" + ");
+        }
+    }
+
+    // Imprimir el resultado final
+    printf(" = %d\n", suma);
+
+    return 0;
+}
