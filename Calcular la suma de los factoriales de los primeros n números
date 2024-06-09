@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+// Función para calcular el factorial de un número
+int factorial(int num) {
+    int fact = 1;
+    for (int i = 1; i <= num; i++) {
+        fact *= i;
+    }
+    return fact;
+}
+
+int main() {
+    int n;
+    int suma = 0;
+
+    // Solicitar al usuario que ingrese un número
+    printf("Ingrese un numero: ");
+    scanf("%d", &n);
+
+    // Imprimir la serie y calcular la suma de los factoriales
+    printf("Si n = %d, suma = ", n);
+    for (int i = 1; i <= n; i++) {
+        printf("%d!", i);
+        suma += factorial(i);
+        if (i != n) {
+            printf(" + ");
+        }
+    }
+
+    // Imprimir los valores de las factoriales y la suma total
+    printf(" = ");
+    for (int i = 1; i <= n; i++) {
+        printf("%d", factorial(i));
+        if (i != n) {
+            printf(" + ");
+        }
+    }
+    printf(" = %d\n", suma);
+
+    return 0;
+}
