@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <stdbool.h>
+
+// Función para determinar si un número es primo
+bool esPrimo(int num) {
+    if (num <= 1) return false;
+    if (num == 2) return true; // 2 es primo
+    if (num % 2 == 0) return false; // Eliminar los pares
+    for (int i = 3; i * i <= num; i += 2) { // Solo verificar impares
+        if (num % i == 0) return false;
+    }
+    return true;
+}
+
+int main() {
+    int n, count = 0;
+
+    // Solicitar al usuario que ingrese un número
+    printf("Ingrese un numero: ");
+    scanf("%d", &n);
+
+    // Imprimir los números primos y contarlos
+    printf("Si n = %d, hay ", n);
+    for (int i = 1; i <= n; i++) {
+        if (esPrimo(i)) {
+            count++;
+        }
+    }
+
+    printf("%d numeros primos (", count);
+    bool first = true;
+    for (int i = 1; i <= n; i++) {
+        if (esPrimo(i)) {
+            if (!first) {
+                printf(", ");
+            }
+            printf("%d", i);
+            first = false;
+        }
+    }
+    printf(")\n");
+
+    return 0;
+}
