@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    int n, suma = 0, i = 1;
+
+    // Solicitar al usuario el número de términos de la serie
+    printf("Ingrese el numero de terminos de la serie aritmetica: ");
+    scanf("%d", &n);
+
+    // Utilizar un bucle do-while para calcular la suma de los términos
+    do {
+        suma += i;
+        i++;
+    } while (i <= n);
+
+    // Imprimir la suma
+    printf("La suma de los primeros %d terminos de la serie aritmetica es: %d\n", n, suma);
+
+    return 0;
+}
