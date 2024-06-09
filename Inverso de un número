@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main() {
+    int numero, inverso = 0;
+
+    // Solicitar al usuario que ingrese un número
+    printf("Ingrese un numero: ");
+    scanf("%d", &numero);
+
+    // Calcular el inverso del número
+    for (int i = numero; i > 0; i--) {
+        inverso = inverso * 10 + i; // Construir el número inverso
+    }
+
+    // Imprimir el número inverso
+    printf("El inverso del numero es: %d\n", inverso);
+
+    return 0;
+}
