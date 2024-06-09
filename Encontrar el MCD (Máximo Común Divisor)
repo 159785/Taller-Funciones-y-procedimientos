@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+// Función para calcular el MCD utilizando el algoritmo de Euclides
+int mcd(int a, int b) {
+    int temp;
+    while (b != 0) {
+        temp = b;
+        b = a % b;
+        a = temp;
+    }
+    return a;
+}
+
+int main() {
+    int num1, num2;
+
+    // Solicitar al usuario que ingrese dos números
+    printf("Ingrese el primer numero: ");
+    scanf("%d", &num1);
+    printf("Ingrese el segundo numero: ");
+    scanf("%d", &num2);
+
+    // Calcular y mostrar el MCD
+    printf("El MCD de %d y %d es %d.\n", num1, num2, mcd(num1, num2));
+
+    return 0;
+}
